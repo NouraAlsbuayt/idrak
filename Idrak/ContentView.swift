@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  Idrak
+//  Idrak2
 //
-//  Created by Noura Alsbuayt on 28/05/1447 AH.
+//  Created by Noura Alsbuayt on 09/06/1447 AH.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("iiii!")
+            Text("Hello, world!")
         }
         .padding()
     }
