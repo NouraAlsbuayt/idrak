@@ -35,9 +35,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3B60B6C62EDDE0D500C270BC /* New Folder */ = {
+		3B60B6C62EDDE0D500C270BC /* lama */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "New Folder";
+			path = lama;
 			sourceTree = "<group>";
 		};
 		F8A8FBA02ECDEA3D00202009 /* Idrak */ = {
@@ -90,7 +90,7 @@
 				F8A8FBB82ECDEA3F00202009 /* IdrakUITests */,
 				F8A8FB9F2ECDEA3D00202009 /* Products */,
 				5A97D5AA2EDDD55C008D20D9 /* Untitled.swift */,
-				3B60B6C62EDDE0D500C270BC /* New Folder */,
+				3B60B6C62EDDE0D500C270BC /* lama */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,7 +120,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3B60B6C62EDDE0D500C270BC /* New Folder */,
+				3B60B6C62EDDE0D500C270BC /* lama */,
 				F8A8FBA02ECDEA3D00202009 /* Idrak */,
 			);
 			name = Idrak;
