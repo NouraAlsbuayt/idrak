@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var categoryVM = CategoryViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            HomePageView(viewModel: categoryVM)
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()

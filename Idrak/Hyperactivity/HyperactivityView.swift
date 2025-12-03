@@ -1,3 +1,8 @@
+//
+//  HyperactivityView.swift
+//  Idrak2
+//
+
 import SwiftUI
 
 struct CurvedShape: View {
@@ -24,13 +29,8 @@ struct CurvedShape: View {
 }
 
 
-
-
-//  DistractionView.swift
-//  Idrak2
-
-struct DistractionView: View {
-    @StateObject private var viewModel = DistractionViewModel()
+struct HyperactivityView: View {
+    @StateObject private var viewModel = HyperactivityViewModel()
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -54,7 +54,7 @@ struct DistractionView: View {
                         .padding(.vertical, 28)
                         .background(Color.white)
                         .cornerRadius(12)
-                        .shadow(color: .black.opacity(0.12),
+                        .shadow(color: .white.opacity(0.12),
                                 radius: 8, x: 0, y: 9)
                         .padding(.horizontal, 32)
                         .padding(.bottom, 20)
@@ -64,9 +64,9 @@ struct DistractionView: View {
                     Button {
                         dismiss()
                     } label: {
-                        Text("Exit")
-                            .font(.title2)
-                            .foregroundColor(.black)
+                        Text("Home Page")
+                            .font(.system(size: 18))
+                            .foregroundColor(.white)
                             .padding(8)
                     }
                     .padding(.top)
@@ -92,14 +92,17 @@ struct DistractionView: View {
                         viewModel.skip()
                     } label: {
                         HStack(spacing: 4) {
+                            
                             Text("Next")
+                                .foregroundColor(.black)
                                 .font(.system(size: 14, weight: .medium))
                             Image(systemName: "chevron.right")
-                                .font(.system(size: 12, weight: .semibold))
-                        }
+                                .foregroundColor(.black)
+
+                                                    }
                         .padding(.horizontal, 18)
                         .padding(.vertical, 10)
-                        .background(Color.white)
+                        .background(Color.idrakBackground)
                         .cornerRadius(12)
                         .shadow(color: .black.opacity(0.1),
                                 radius: 4, x: 0, y: 2)
@@ -108,14 +111,24 @@ struct DistractionView: View {
                 .padding(.horizontal, 24)
                 .padding(.bottom, 24)
             }
+
+            NavigationLink(
+                destination: CongratsView(viewModel: viewModel),
+                isActive: $viewModel.showCongrats
+            ) {
+                EmptyView()
+            }
+            .hidden()
         }
         .onAppear {
             viewModel.start()
         }
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    DistractionView()
+    NavigationStack {
+        HyperactivityView()
+    }
 }
