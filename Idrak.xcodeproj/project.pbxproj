@@ -86,9 +86,9 @@
 		5A56134F2EDFD796000D6862 /* Techniques */ = {
 			isa = PBXGroup;
 			children = (
-				5A56134C2EDFD77F000D6862 /* BallView.swift */,
 				5A97D5AA2EDDD55C008D20D9 /* Untitled.swift */,
 				5A5613522EDFD7DA000D6862 /* InfinityView.swift */,
+				5A56134C2EDFD77F000D6862 /* BallView.swift */,
 				5A56134A2EDFD736000D6862 /* NiceJobTechniquesView.swift */,
 			);
 			path = Techniques;
