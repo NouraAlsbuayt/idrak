@@ -65,7 +65,7 @@ struct HomePageView: View {
         } else if viewModel.focusSelected {
             EmptyView()
         } else if viewModel.distractionSelected {
-            BreathingView()   
+            EmptyView()
         } else {
             EmptyView()
         }

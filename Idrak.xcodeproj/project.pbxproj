@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		5A97D5AB2EDDD55E008D20D9 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97D5AA2EDDD55C008D20D9 /* BreathingView.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		F8A8FBAC2ECDEA3F00202009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,7 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5A97D5AA2EDDD55C008D20D9 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
 		F8A8FB9E2ECDEA3D00202009 /* Idrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Idrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8FBAB2ECDEA3F00202009 /* IdrakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdrakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8FBB52ECDEA3F00202009 /* IdrakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdrakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +79,6 @@
 				F8A8FBAE2ECDEA3F00202009 /* IdrakTests */,
 				F8A8FBB82ECDEA3F00202009 /* IdrakUITests */,
 				F8A8FB9F2ECDEA3D00202009 /* Products */,
-				5A97D5AA2EDDD55C008D20D9 /* BreathingView.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A97D5AB2EDDD55E008D20D9 /* BreathingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
