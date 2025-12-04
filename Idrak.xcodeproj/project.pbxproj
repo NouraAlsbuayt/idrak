@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5A5614A02EE1C6F9000D6862 /* InfinityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56149C2EE1C6F9000D6862 /* InfinityView.swift */; };
+		5A5614A12EE1C6F9000D6862 /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56149B2EE1C6F9000D6862 /* Untitled.swift */; };
+		5A5614A22EE1C6F9000D6862 /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56149D2EE1C6F9000D6862 /* BallView.swift */; };
+		5A5614A32EE1C6F9000D6862 /* NiceJobTechniquesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56149E2EE1C6F9000D6862 /* NiceJobTechniquesView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F8A8FBAC2ECDEA3F00202009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A56149B2EE1C6F9000D6862 /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
+		5A56149C2EE1C6F9000D6862 /* InfinityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityView.swift; sourceTree = "<group>"; };
+		5A56149D2EE1C6F9000D6862 /* BallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
+		5A56149E2EE1C6F9000D6862 /* NiceJobTechniquesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceJobTechniquesView.swift; sourceTree = "<group>"; };
 		F8A8FB9E2ECDEA3D00202009 /* Idrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Idrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8FBAB2ECDEA3F00202009 /* IdrakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdrakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8FBB52ECDEA3F00202009 /* IdrakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdrakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,12 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A56149F2EE1C6F9000D6862 /* Techniques */ = {
+			isa = PBXGroup;
+			children = (
+				5A56149B2EE1C6F9000D6862 /* Untitled.swift */,
+				5A56149C2EE1C6F9000D6862 /* InfinityView.swift */,
+				5A56149D2EE1C6F9000D6862 /* BallView.swift */,
+				5A56149E2EE1C6F9000D6862 /* NiceJobTechniquesView.swift */,
+			);
+			path = Techniques;
+			sourceTree = "<group>";
+		};
 		F8A8FB952ECDEA3D00202009 = {
 			isa = PBXGroup;
 			children = (
 				F8A8FBA02ECDEA3D00202009 /* Idrak */,
 				F8A8FBAE2ECDEA3F00202009 /* IdrakTests */,
 				F8A8FBB82ECDEA3F00202009 /* IdrakUITests */,
+				5A56149F2EE1C6F9000D6862 /* Techniques */,
 				F8A8FB9F2ECDEA3D00202009 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -236,6 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5614A02EE1C6F9000D6862 /* InfinityView.swift in Sources */,
+				5A5614A12EE1C6F9000D6862 /* Untitled.swift in Sources */,
+				5A5614A22EE1C6F9000D6862 /* BallView.swift in Sources */,
+				5A5614A32EE1C6F9000D6862 /* NiceJobTechniquesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
