@@ -28,14 +28,15 @@ struct Pom: View {
 
     var body: some View {
         ZStack {
-            // الخلفية الأساسية باللون البيج الفاتح
+            // الخلفية الأساسية
             Color.customBackground
-                .IdrakBackground()
-            Color.customBackground.IdrakTeal(.all)
+                .ignoresSafeArea()
+            Color.customBackground
+                .edgesIgnoringSafeArea(.all)
 
             VStack {
-                // الجزء الأخضر المنحني في الأعلى
-                CurvedShape(color: .customGreen)
+                // الجزء الأخضر/الأزرق المنحني في الأعلى
+                CurvedShape(color: .color1)
                     .frame(height: 180)
                     .ignoresSafeArea(edges: .top)
                 
@@ -63,7 +64,7 @@ struct Pom: View {
                         .font(.system(size: 80, weight: .bold))
                         .foregroundColor(.white)
                         .frame(width: 340, height: 150)
-                        .background(Color.customGreen)
+                        .background(Color.color1)
                         .cornerRadius(20)
                     
                     // أزرار التحكم بالمؤقت
@@ -71,7 +72,7 @@ struct Pom: View {
                         Button(action: { toggleTimer() }) {
                             Image(systemName: timerIsRunning ? "pause.fill" : "play.fill")
                                 .font(.title2)
-                                .foregroundColor(.customGreen)
+                                .foregroundColor(.color1)
                         }
                         Button(action: { resetTimer() }) {
                             Image(systemName: "arrow.counterclockwise")
@@ -81,7 +82,7 @@ struct Pom: View {
                         Button(action: { skipTimer() }) {
                             Image(systemName: "forward.fill")
                                 .font(.title2)
-                                .foregroundColor(.customGreen)
+                                .foregroundColor(.color1)
                         }
                     }
                     .padding(.top, 20)
@@ -104,7 +105,7 @@ struct Pom: View {
                         Text("NEXT >")
                             .font(.callout)
                             .fontWeight(.medium)
-                            .foregroundColor(.customGreen)
+                            .foregroundColor(.color1)
                             .padding(.trailing, 20)
                             .padding(.bottom, 20)
                     }
@@ -170,5 +171,13 @@ struct Pom: View {
 }
 
 #Preview {
-    br()
+    // توفير Binding لمسار التنقل للمعاينة
+    StatefulPreviewWrapper(NavigationPath()) { path in
+        Pom(
+            path: path,
+            timerDuration: 25,
+            title: "Pomodoro Techniques",
+            nextScreen: .pomodoro5
+        )
+    }
 }
