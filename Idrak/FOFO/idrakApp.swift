@@ -13,13 +13,12 @@ struct CountViewTemplate: View {
     var body: some View {
         ZStack {
             // الخلفية الأساسية باللون البيج الفاتح
-            Color.customBackground.edgesIgnoringSafeArea(.all)
-            Color.customBackground.edgesIgnoringSafeArea(.all)
+            Color("IdrakBackground").ignoresSafeArea()
 
             
             VStack {
                 // الجزء الأخضر المنحني في الأعلى
-                CurvedShape(color: .customGreen)
+                CurvedShape(color: Color("color1"))
                     .frame(height: 170) // ارتفاع أقل من شاشة start
                     .edgesIgnoringSafeArea(.top)
                 
@@ -44,7 +43,7 @@ struct CountViewTemplate: View {
                 // الدائرة التي تحمل رقم العد
                 ZStack {
                     Circle()
-                        .fill(Color.customGreen)
+                        .fill(Color.color1)
                         .frame(width: 150, height: 150)
                     
                     Text("\(countNumber)")
@@ -71,25 +70,3 @@ struct CountViewTemplate: View {
         }
     }
 }
-    .navigationDestination(for: AppScreen.self) { screen in
-        switch screen {
-        case .write:
-            Write(path: $path)
-        case .pomodoro25:
-            Pom(path: $path,
-                timerDuration: 25,
-                title: "Pomodoro Techniques",
-                nextScreen: .pomodoro5)
-        case .pomodoro5:
-            Pom(path: $path,
-                timerDuration: 5,
-                title: "Break Time",
-                nextScreen: .youdid)
-        case .youdid:
-            YouDid(path: $path)
-        }
-    }
-}
-}
-}
-

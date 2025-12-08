@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Pom: View {
+struct Pom1: View {
     @Binding var path: NavigationPath // لتمرير مسار التنقل
     let timerDuration: Int // المدة بالدقائق (25 أو 5)
     let title: String // عنوان الصفحة "Pomodoro Techniques"
@@ -35,7 +35,7 @@ struct Pom: View {
 
             VStack {
                 // الجزء الأخضر المنحني في الأعلى
-                CurvedShape(color: .customGreen)
+                CurvedShape(color: .color1)
                     .frame(height: 180)
                     .ignoresSafeArea(edges: .top)
                 
@@ -63,7 +63,7 @@ struct Pom: View {
                         .font(.system(size: 80, weight: .bold))
                         .foregroundColor(.white)
                         .frame(width: 340, height: 150)
-                        .background(Color.customGreen)
+                        .background(Color.color1)
                         .cornerRadius(20)
                     
                     // أزرار التحكم بالمؤقت
@@ -71,7 +71,7 @@ struct Pom: View {
                         Button(action: { toggleTimer() }) {
                             Image(systemName: timerIsRunning ? "pause.fill" : "play.fill")
                                 .font(.title2)
-                                .foregroundColor(.customGreen)
+                                .foregroundColor(.color1)
                         }
                         Button(action: { resetTimer() }) {
                             Image(systemName: "arrow.counterclockwise")
@@ -81,7 +81,7 @@ struct Pom: View {
                         Button(action: { skipTimer() }) {
                             Image(systemName: "forward.fill")
                                 .font(.title2)
-                                .foregroundColor(.customGreen)
+                                .foregroundColor(.color1)
                         }
                     }
                     .padding(.top, 20)
@@ -104,7 +104,7 @@ struct Pom: View {
                         Text("NEXT >")
                             .font(.callout)
                             .fontWeight(.medium)
-                            .foregroundColor(.customGreen)
+                            .foregroundColor(.color1)
                             .padding(.trailing, 20)
                             .padding(.bottom, 20)
                     }
@@ -170,5 +170,28 @@ struct Pom: View {
 }
 
 #Preview {
-    pom()
+    // معاينة تجريبية بربط مسار تنقّل محلي
+    StatefulPreviewWrapper(NavigationPath()) { path in
+        Pom1(
+            path: path,
+            timerDuration: 25,
+            title: "Pomodoro Techniques",
+            nextScreen: .pomodoro5
+        )
+    }
+}
+
+// أداة بسيطة لتوفير Binding في المعاينة
+struct StatefulPreviewWrapper<Value, Content: View>: View {
+    @State var value: Value
+    var content: (Binding<Value>) -> Content
+
+    init(_ value: Value, content: @escaping (Binding<Value>) -> Content) {
+        _value = State(initialValue: value)
+        self.content = content
+    }
+
+    var body: some View {
+        content($value)
+    }
 }

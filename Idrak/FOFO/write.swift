@@ -18,7 +18,7 @@ struct Write: View {
             
             VStack(spacing: 0) {
                 // الشكل العلوي المنحني يغطي أعلى الشاشة
-                CurvedShape(color: .customGreen)
+                CurvedShape(color: .color1)
                     .frame(height: 370) // ارتفاع أكبر قليلًا
                     .offset(y: 38)      // رفع الشكل للأعلى لتجاوز حافة الالتقاء
                     .clipped()          // قص أي رسم خارج الإطار
@@ -92,6 +92,9 @@ struct Write: View {
         }
     }
 }
+
 #Preview {
-    write()
+    StatefulPreviewWrapper(NavigationPath()) { path in
+        Write(path: path)
+    }
 }
